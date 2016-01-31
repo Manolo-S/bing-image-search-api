@@ -47,12 +47,3 @@ console.log('Server running at http://127.0.0.1:' + port + '/');
 
 
 
-
- 
-// search.images('monkey',
-//   {top: 5},
-//   function(err, results) {
-//     console.log(util.inspect(results, 
-//       {colors: true, depth: null}));
-//   }
-// );
