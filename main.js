@@ -22,7 +22,7 @@ app.use(express.static(__dirname + '/public'));
 
 function homePage(req, res){
 	res.setHeader('Content-Type', 'text/html');
-	res.send('<html><head><title>Bing image search</title></head><body><p>This app provides a Bing image search API at end point: http://localhost:3000/api/imagesearch/"search string"</p></body></html>');	
+	res.send('<html><head><title>Bing image search</title></head><body><h3>This app provides a Bing image search API at end point: http://localhost:3000/api/imagesearch/"search string"</h3><h3>last 10 searches available through /api/latest/imagesearch</h3></body></html>');	
 }
 
 function storeSearchStr (searchStr, dateTime){
@@ -59,10 +59,10 @@ function searchBing(req, res){
 	var dateTime = String(new Date());
 	storeSearchStr(searchStr, dateTime);
 	search.images(searchStr, 
-		{top: 5},
+		{top: 10},
 		function (err,results){
 			var html = '';
-			for (var i = 0; i < 5; i++){
+			for (var i = 0; i < 10; i++){
 				var picture = results[i];
 				html += '<div>';
 				html += '<p>' +  picture.title + '</p>';
