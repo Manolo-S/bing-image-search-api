@@ -22,7 +22,7 @@ app.use(express.static(__dirname + '/public'));
 
 function homePage(req, res){
 	res.setHeader('Content-Type', 'text/html');
-	res.send('<html><head><title>Bing image search</title></head><body><h3>This app provides a Bing image search API at end point: http://localhost:3000/api/imagesearch/"search string"</h3><h3>last 10 searches available through /api/latest/imagesearch</h3></body></html>');	
+	res.send('<html><head><title>Bing image search</title></head><body><p>This app provides a Bing image search API at end point: http://localhost:3000/api/imagesearch/"search string"</p><p>Last 10 searches available through /api/latest/imagesearch</p></body></html>');	
 }
 
 function storeSearchStr (searchStr, dateTime){
