@@ -5,9 +5,9 @@ var app = express();
 var path = require('path');
 var port = process.env.PORT || 3000;
 var Search = require('bing.search');
-var search = new Search('v8IpA72Fxk92ypqkTHBssO8LgtdWslCdi7MWPW/u690');
+var search = new Search('');
 var mongoose = require('mongoose');
-var db = mongoose.connect('mongodb://piet:snot1@ds049854.mongolab.com:49854/bing-image-search');
+var db = mongoose.connect('mongodb://x:x@ds049854.mongolab.com:49854/bing-image-search');
 var Schema = mongoose.Schema;
 
 var bingImageSchema = new Schema ({
