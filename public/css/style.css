@@ -10,3 +10,9 @@ div {
     margin-left: 1em;
     padding: 0.1em 0.1em 0.1em 0.5em;
 }
+
+
+span {
+	color: blue;
+	font-weight: bold;
+}
